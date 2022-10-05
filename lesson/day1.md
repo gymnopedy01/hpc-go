@@ -6,22 +6,25 @@ $> apt-get upgrade
 ```
 
 # go lang 소개
-https://go.dev/play/
-brace 를 라인 앞에 달면 컴파일 오류남
+- https://go.dev/play/
+- brace 를 라인 앞에 달면 컴파일 오류남
 
 # top 명령어는 컴퓨터의 상태를 보여줌
-1 을 누르면 cpu의 상태를 보여줌
+```sh
 $> top
+```
+- 1 을 누르면 cpu의 상태를 보여줌
+
 
 
 # GO LANG
-강타입언어 오토캐스팅(data preserving) 지원안함 (오류남
-데이터타입 생략가능
-덕타임핑 인터페이스 
-슬라이스 : 배열은 배열인데 크기가 정해져있지않은배열. 동적배열. 포인터로 연결된.
+- 강타입언어 오토캐스팅(data preserving) 지원안함 (오류남
+- 데이터타입 생략가능
+- 덕타임핑 인터페이스 
+- 슬라이스 : 배열은 배열인데 크기가 정해져있지않은배열. 동적배열. 포인터로 연결된.
 
 # HelloWorld.go
-컴파일 & 실행
+- 컴파일 & 실행
 # GO BUILD
 ```sh
 > go run hello.go
@@ -30,7 +33,7 @@ $> top
 ```
 
 # UBUNTU GO 설치
-이렇게 했더니 1.13이 설치됨
+- 이렇게 했더니 1.13이 설치됨
 ```sh 
 $> sudo apt-get install golang.go
 $> sudo apt-get purge golang.go
@@ -61,9 +64,9 @@ $> sudo apt-get install git
 ```
 
 # 요약
-Go는 정적 컴파일 언어
-Go는 강타입 언어
-Go는 가비지컬렉터를 제공
+- Go는 정적 컴파일 언어
+- Go는 강타입 언어
+- Go는 가비지컬렉터를 제공
 "12"+12의 결과는?
 
 # 변수
@@ -71,22 +74,24 @@ Go는 가비지컬렉터를 제공
 - 밑줄은 일반적으로 사용하지 않습니다. 
 
 ### 기본형 데이터타입
-- uint8  1바이트 부호없는 정수
-- uint16
-- uint32
-- uint64
-- int8
-- int16
-- int32
-- int64
-- float32
-- float64
-- complex64 :  8바이트 복소수(진수,가수)
-- complex128 : 16바이트 복소수(진수,가수)
-- byte :  uint8의 별칭. 1바이트 데이터를 나타낼 떄 사용
-- rune : int32의 별칭. UTF-8로 문자 하나를 나타낼 때 사용
-- int : 32비트 컴퓨터에서는 int32. 64 비트 컴퓨터에서는 int64와 같음
-- uint : 32비트 컴퓨터에서는 uint32. 64비트 컴퓨터에서는 uint64와 같음
+|자료형|설명|
+|-----|--------------------|
+|uint8| 1바이트 부호없는 정수|
+|uint16||
+|uint32||
+|uint64||
+|int8||
+|int16||
+|int32||
+|int64||
+|float32||
+|float64||
+|complex64|8바이트 복소수(진수,가수)|
+|complex128|16바이트 복소수(진수,가수)|
+|byte|uint8의 별칭. 1바이트 데이터를 나타낼 떄 사용|
+|rune|int32의 별칭. UTF-8로 문자 하나를 나타낼 때 사용|
+|int|32비트 컴퓨터에서는 int32. 64 비트 컴퓨터에서는 int64와 같음|
+|uint|32비트 컴퓨터에서는 uint32. 64비트 컴퓨터에서는 uint64와 같음|
 ### 그외 타입
 - boolean
 - 문자열
@@ -107,36 +112,34 @@ c:=365
 s:="hello world"        //
 ```
 
-
 ## 타입변환
-autopreserving
+type conversion
 
 ```go
 a:=3    //int
 var b float54 = 3.5
 
 var c int = b       //Error - float64 변수를 int 에 대입불가
-d := a*b            //Error - 다른 타입인 int 변수와 flaot64연산 불가
+d := a * b          //Error - 다른 타입인 int 변수와 flaot64 연산 불가
 
 var e int64 = 7 
-f := a*e            //Error - a 는 int 타입 ,  e는 int64 타입으로 같은 정수값이지만 타입이 달라서 연산 불가
-
+f := a * e          //Error - a 는 int 타입,  e는 int64 타입으로 같은 정수값이지만 타입이 달라서 연산 불가
 ```
 
-실수 : IEEE 754
+## 실수 : [IEEE 754](https://ko.wikipedia.org/wiki/IEEE_754)
 
-#5. fmt  패키지를 이용한 텍스트 입출력
-##5.1 표춘 입출력
-###5.1.1 fmt 패키지
+# 5. fmt  패키지를 이용한 텍스트 입출력
+## 5.1 표춘 입출력
+### 5.1.1 fmt 패키지
 - Print()
 - Println()
 - Printf() 
 
-##5.2 표준 입력
+## 5.2 표준 입력
 
 Scan() 표준입력에서 값을 입력받습니다.
 Scanf() 표준입력에서 서식 형태로 값을 입력받습니다.
-Scanln() 펴ㅛ준 입력에서 한줄을 읽어서 값을 입력받습니다.
+Scanln() 표준 입력에서 한줄을 읽어서 값을 입력받습니다.
 
 ### 5.2.2 Scan ()
 Scan() 함수는 값을 채워넣을 변수들의 메모리 주소를 인수로 받습니다. 한번에 여러 값을 입력 받을때는 변수 사이를 공란을 두어 구분합니다(enter 키도 공란으로 인식합니다).
