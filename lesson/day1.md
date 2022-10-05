@@ -8,7 +8,7 @@ $> apt-get update
 $> apt-get upgrade
 ```
 
-# go lang 소개
+# 1. go lang 소개
 - https://go.dev/play/
 - brace 를 라인 앞에 달면 컴파일 오류남
 
@@ -43,7 +43,8 @@ func main() {
 > ./hello.exe
 ```
 
-### UBUNTU GO 설치
+# 설치
+### GO 설치 (UBUNTU)
 - 이렇게 했더니 1.13이 설치됨
 ```sh 
 $> sudo apt-get install golang.go
