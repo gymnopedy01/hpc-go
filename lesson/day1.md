@@ -4,6 +4,7 @@
 정보확인
 ```
 $> cat /etc/os-release
+ubuntu 20.04 LTS
 $> apt-get update
 $> apt-get upgrade
 ```
@@ -44,8 +45,8 @@ func main() {
 ```
 
 # 설치
-### GO 설치 (UBUNTU)
-- 이렇게 했더니 1.13이 설치됨
+## GO 설치 (UBUNTU)
+### 패키지매니저로 설치 했더니 옛날버전 v1.13이 설치되어 삭제함
 ```sh 
 $> sudo apt-get install golang.go
 $> sudo apt-get purge golang.go
@@ -54,7 +55,7 @@ $> sudo apt-get purge golang.go
 ### 최신 버전 설치하는법 
 - download [go1.19.2.linux-amd64.tar.gz](https://go.dev/dl/go1.19.2.linux-amd64.tar.gz)
 - https://go.dev/doc/install 
-```
+```sh
 $ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
 $ vi ~/.profile
 $ mkdir ~/hpc-go/go
@@ -65,7 +66,8 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/hpc-go/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
-- vscode 설치
+## vscode 설치
+- download [.deb](https://code.visualstudio.com/Download)
 ```sh
 $ sudo dpkg -i code_1.71.2~~
 ```
@@ -81,7 +83,7 @@ $> sudo apt-get install git
  - 동적컴파일: 코드를 미리 바꾸어놓지 않고 실행할때 마다 기계어로 바꾸는 언어 . java python
 - Go는 강타입 언어
 - Go는 가비지컬렉터를 제공
-- "12"+12의 결과는?
+- "12" + 12의 결과는?
 
 # 4. 변수
 - 카멜케이스 변수명에 여러단어가 이어지면 두번째 단어부터는 대문자로 이어집니다.
@@ -120,11 +122,11 @@ $> sudo apt-get install git
 - 채널 : 멀티스레드 환경에 특화된 큐 형태 자료구조입니다. 앞으로 각 타입에 대해 자세히 배우게 되니깐 이런게 있구나 정도로알고 넘어가도 됩니다.
 
 ### 선언대입문 := 
-- 선언대입문이란 말그대로 선언봐 대입을 한꺼번에 하는 구문입니다. var 키워드와 타입을 생략해 변수를 선언 할 수 있습니다.
+- 선언대입문이란 말그대로 선언과 대입을 한꺼번에 하는 구문입니다. var 키워드와 타입을 생략해 변수를 선언 할 수 있습니다.
 ```go
-var b= 3.1415
-c:=365
-s:="hello world"        //
+var b = 3.1415
+c := 365
+s := "hello world"        //
 ```
 
 ## 타입변환
