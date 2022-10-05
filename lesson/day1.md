@@ -106,6 +106,7 @@ $> sudo apt-get install git
 |rune|int32의 별칭. UTF-8로 문자 하나를 나타낼 때 사용|
 |int|32비트 컴퓨터에서는 int32. 64 비트 컴퓨터에서는 int64와 같음|
 |uint|32비트 컴퓨터에서는 uint32. 64비트 컴퓨터에서는 uint64와 같음|
+
 ### 그외 타입
 - boolean
 - 문자열
@@ -139,6 +140,7 @@ var e int64 = 7
 f := a * e          //Error - a 는 int 타입,  e는 int64 타입으로 같은 정수값이지만 타입이 달라서 연산 불가
 ```
 
+## 보수 : [1의보수](https://ko.wikipedia.org/wiki/1%EC%9D%98_%EB%B3%B4%EC%88%98), [2의보수](https://ko.wikipedia.org/wiki/2%EC%9D%98_%EB%B3%B4%EC%88%98)
 ## 실수 : [IEEE 754](https://ko.wikipedia.org/wiki/IEEE_754)
 
 # 5. fmt  패키지를 이용한 텍스트 입출력
@@ -153,7 +155,7 @@ f := a * e          //Error - a 는 int 타입,  e는 int64 타입으로 같은 
 - Scanf() 표준입력에서 서식 형태로 값을 입력받습니다.
 - Scanln() 표준 입력에서 한줄을 읽어서 값을 입력받습니다.
 
-### 5.2.2 Scan ()
+### 5.2.2 Scan()
 - Scan() 함수는 값을 채워넣을 변수들의 메모리 주소를 인수로 받습니다. 한번에 여러 값을 입력 받을때는 변수 사이를 공란을 두어 구분합니다(enter 키도 공란으로 인식합니다).
 ```go
 func Scan(a ...interface{}) (n int, err error)
@@ -165,7 +167,7 @@ func Scan(a ...interface{}) (n int, err error)
 Scanf() 함수는 서식에 맞춘 입력을 받습니다.
 
 ### 5.2.4 Scanln()
-Scanln() 함수는 한줄을 입력받아서 인수로 드어온 변수메모리 주ㅗ에 갑을 채워줍니다.
+Scanln() 함수는 한줄을 입력받아서 인수로 드어온 변수메모리 주소에 값을 채워줍니다.
 
 
 # 6. 연산자
