@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var a int
+	var b int
+
+	n, err := fmt.Scanf("%d %d\n", &a, &b)
+
+	if err != nil {
+		fmt.Println(n, err)
+	}
+
+	fmt.Println(n, a, b)
+
+}
