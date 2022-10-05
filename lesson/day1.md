@@ -19,31 +19,38 @@ $> top
 - 1 을 누르면 cpu의 core들의 상태를 보여줌
 
 
-
 # GO LANG
 - 강타입언어 오토캐스팅(data preserving) 지원안함 (오류남
 - 데이터타입 생략가능
 - 덕타임핑 인터페이스 
 - 슬라이스 : 배열은 배열인데 크기가 정해져있지않은배열. 동적배열. 포인터로 연결된.
 
-# HelloWorld.go
-- 컴파일 & 실행
+## HelloWorld.go
+```go
+package main
 
-# GO BUILD
+import "fmt"
+
+func main() {
+	fmt.Println(" hello world")
+}
+```
+
+## GO BUILD & RUN
 ```sh
 > go run hello.go
 > go build hello.go
 > ./hello.exe
 ```
 
-# UBUNTU GO 설치
+### UBUNTU GO 설치
 - 이렇게 했더니 1.13이 설치됨
 ```sh 
 $> sudo apt-get install golang.go
 $> sudo apt-get purge golang.go
 ```
 
-## 최신 버전 설치하는법 
+### 최신 버전 설치하는법 
 - download [go1.19.2.linux-amd64.tar.gz](https://go.dev/dl/go1.19.2.linux-amd64.tar.gz)
 - https://go.dev/doc/install 
 ```
@@ -62,12 +69,12 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 $ sudo dpkg -i code_1.71.2~~
 ```
 
-# GIT 설치
+## GIT 설치
 ```
 $> sudo apt-get install git
 ```
 
-# 요약
+## 요약
 - Go는 정적 컴파일 언어
 - Go는 강타입 언어
 - Go는 가비지컬렉터를 제공
