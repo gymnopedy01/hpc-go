@@ -1,4 +1,7 @@
 # 클라우드 서버 접속
+
+
+정보확인
 ```
 $> cat /etc/os-release
 $> apt-get update
@@ -13,7 +16,7 @@ $> apt-get upgrade
 ```sh
 $> top
 ```
-- 1 을 누르면 cpu의 상태를 보여줌
+- 1 을 누르면 cpu의 core들의 상태를 보여줌
 
 
 
@@ -25,6 +28,7 @@ $> top
 
 # HelloWorld.go
 - 컴파일 & 실행
+
 # GO BUILD
 ```sh
 > go run hello.go
@@ -40,23 +44,23 @@ $> sudo apt-get purge golang.go
 ```
 
 ## 최신 버전 설치하는법 
-- https://go.dev/doc/install
 - download [go1.19.2.linux-amd64.tar.gz](https://go.dev/dl/go1.19.2.linux-amd64.tar.gz)
- 
+- https://go.dev/doc/install 
 ```
 $ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
 $ vi ~/.profile
 $ mkdir ~/hpc-go/go
-sudo dpkg -i code_1.71.2~~
 ```
-.profile 에 환경변수 추가
-```
+- .profile 에 환경변수 추가
+```sh
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/hpc-go/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
-
-
+- vscode 설치
+```sh
+$ sudo dpkg -i code_1.71.2~~
+```
 
 # GIT 설치
 ```
@@ -67,9 +71,9 @@ $> sudo apt-get install git
 - Go는 정적 컴파일 언어
 - Go는 강타입 언어
 - Go는 가비지컬렉터를 제공
-"12"+12의 결과는?
+- "12"+12의 결과는?
 
-# 변수
+# 4. 변수
 - 카멜케이스 변수명에 여러단어가 이어지면 두번째 단어부터는 대문자로 이어집니다.
 - 밑줄은 일반적으로 사용하지 않습니다. 
 
@@ -105,16 +109,15 @@ $> sudo apt-get install git
 - 채널 : 멀티스레드 환경에 특화된 큐 형태 자료구조입니다. 앞으로 각 타입에 대해 자세히 배우게 되니깐 이런게 있구나 정도로알고 넘어가도 됩니다.
 
 ### 선언대입문 := 
-선언대입문이란 말그대로 선언봐 대입을 한꺼번에 하는 구문입니다.  var 키워드와 타입을 생략해 변수를 선언 할 수 있습니다.
-```
+- 선언대입문이란 말그대로 선언봐 대입을 한꺼번에 하는 구문입니다. var 키워드와 타입을 생략해 변수를 선언 할 수 있습니다.
+```go
 var b= 3.1415
 c:=365
 s:="hello world"        //
 ```
 
 ## 타입변환
-type conversion
-
+- type conversion
 ```go
 a:=3    //int
 var b float54 = 3.5
@@ -136,14 +139,13 @@ f := a * e          //Error - a 는 int 타입,  e는 int64 타입으로 같은 
 - Printf() 
 
 ## 5.2 표준 입력
-
-Scan() 표준입력에서 값을 입력받습니다.
-Scanf() 표준입력에서 서식 형태로 값을 입력받습니다.
-Scanln() 표준 입력에서 한줄을 읽어서 값을 입력받습니다.
+- Scan() 표준입력에서 값을 입력받습니다.
+- Scanf() 표준입력에서 서식 형태로 값을 입력받습니다.
+- Scanln() 표준 입력에서 한줄을 읽어서 값을 입력받습니다.
 
 ### 5.2.2 Scan ()
-Scan() 함수는 값을 채워넣을 변수들의 메모리 주소를 인수로 받습니다. 한번에 여러 값을 입력 받을때는 변수 사이를 공란을 두어 구분합니다(enter 키도 공란으로 인식합니다).
-```
+- Scan() 함수는 값을 채워넣을 변수들의 메모리 주소를 인수로 받습니다. 한번에 여러 값을 입력 받을때는 변수 사이를 공란을 두어 구분합니다(enter 키도 공란으로 인식합니다).
+```go
 func Scan(a ...interface{}) (n int, err error)
 ```
 함수 반환값은 성공적으로 입력한 값 개수와 입력 실패시 에러를 반환합니다.
