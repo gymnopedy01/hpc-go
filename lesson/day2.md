@@ -1,6 +1,5 @@
 2일차
 - 자료공유 https://drive.google.com/file/d/1n1Nl_Z856KbYJk8TTi91Bg93jARdIrdO/view?usp=sharing
-- 
 
 # 7. 함수
 함수는 함수키워드, 함수명, 매개변수, 반환타입, 함수 코드블록으로 구성됩니다.
@@ -20,11 +19,12 @@ func Add(a int, b int) int {
 재귀호출(recursive call)이란 함수 안에서 자기자신함수를 다시 호출 한느것을 말합니다.
 
 리턴어드레스를 스택에 쌓지 않고, 힙에 쌓는다. 재귀호출의 리턴조건이 없다면 무한정 호출한다.
-- core dump 확인
+
 - 그래픽 top 설치는?
 ```sh
 $ sudo apt-get install htop
 ```
+- core dump 확인
 ```sh
 $ ulimit -a
 $ stack size              (kbytes, -s) 8192
@@ -140,7 +140,9 @@ switch 비교값 {   //겁사하는 값이 옵니다.
     문장
 }
 ```
+
 ## 10.3 다양한 switch문 형태
+
 ### 10.3.1 한 번에 여러 값 비교
 하나의 case는 하나이상의 값을 비교할수 있습니다. 각 값은 쉼료, 로 구분합니다.
 
@@ -264,7 +266,7 @@ var a Student
 p=&a
 ```
 
-## # 14.1.1 포인터 변수
+### 14.1.1 포인터 변수
 포인터 변수는 가리키는 데이터 타입 앞에 *을 붙여서 선언합니다. int 타입 변수를 가리키는 포인터 변수를 선언해볼까요?
 ``` 
 var  p * int
