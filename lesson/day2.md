@@ -2,7 +2,7 @@
 - 자료공유 https://drive.google.com/file/d/1n1Nl_Z856KbYJk8TTi91Bg93jARdIrdO/view?usp=sharing
 - 
 
-#7. 함수
+# 7. 함수
 함수는 함수키워드, 함수명, 매개변수, 반환타입, 함수 코드블록으로 구성됩니다.
 ```
 func Add(a int, b int) int {
@@ -20,27 +20,24 @@ func Add(a int, b int) int {
 재귀호출(recursive call)이란 함수 안에서 자기자신함수를 다시 호출 한느것을 말합니다.
 
 리턴어드레스를 스택에 쌓지 않고, 힙에 쌓는다. 재귀호출의 리턴조건이 없다면 무한정 호출한다.
-
-그래픽top 설치하면
+- core dump 확인
+- 그래픽 top 설치는?
 ```sh
 $ sudo apt-get install htop
 ```
 ```sh
 $ ulimit -a
-stack size              (kbytes, -s) 8192
+$ stack size              (kbytes, -s) 8192
+$ ulimit -c unlimited
 
-  242  vi a.c
-  243  gcc a.c
-  244  ./ a.out
-  245  ./a.out
-  246  gcc -g a.c
-  247  ./a.out
-  248  ulimit -c unlimited
-  249  ./a.out
-  250  ls -al
+$ vi a.c
+$ gcc a.c
+$ ./ a.out
 
-  cat /var/log/syslog
-  ls /var/crash
+코어 덤프 확인해야 되지만 실습장에서 코어 덤프가 발생하지 않음
+
+$ cat /var/log/syslog
+$ ls /var/crash
 ```
 [Ubuntu Core Dump 설정방법](https://blog.naver.com/PostView.naver?blogId=zdr55&logNo=222003486778)
 
@@ -204,7 +201,7 @@ var s = [5]int {1:10, 3:30}}
 var := [...]int {10,20,30}
 ```
 
-### 12.2.3 rangee 순회
+### 12.2.3 range 순회
 for 반복문에서 range  키워드를 이용하면 배열 요소를 순회할 수 있습니다.
 range 는 배열의 각 요소를 순회하면서 인덱스의 요솟값 두값을 반환합니다. 선언 대입문을 사용하여 i변수에는 인덱스 값을 대입하고, v 변수에는 요솟값을 대입했습니다.
 
@@ -227,7 +224,7 @@ for _, v:= range t {
 
 ## 13 구조체
 형식
-```
+```go
 type 타입명 struct {
   필드명 타입
   ...
@@ -248,7 +245,7 @@ type Student struct {
 var a Student
 ```
 
-13.4 구조체크기
+## 13.4 구조체크기
 ## 복사
 구조체 변수값을 다른 구조체에 대입하면 모든 필드값이 복사됩니다.
 
