@@ -21,7 +21,7 @@ func (s Students) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
 func main() {
 	s := []Student{
 		{"화랑", 31}, {"백두산", 52}, {"류", 42},
-		{"켄", 38"}, {"thdgksk", 18}}
+		{"켄", 38}, {"송하나", 18}}
 
 	sort.Sort(Students(s))
 	fmt.Println(s)
