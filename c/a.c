@@ -13,4 +13,4 @@ int sum(int i)
 
 // $gcc a.c
 // $./a.out
-// $Segmentation fault
+// Segmentation fault
