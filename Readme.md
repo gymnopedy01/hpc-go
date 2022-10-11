@@ -30,7 +30,7 @@ Go언어를 빠르게 한번 훓어보는 강의 였음.
 
 # 실습환경
 - IDE : 비주얼 스튜디오 코드
-- OS : LINUX HPC에서 제공해준 리눅스 ubuntu 20.04 lts
+- OS : HPC에서 제공해준 리눅스 ubuntu 20.04 lts
 - GO : go 1.19.2  
 - GIT 
   
