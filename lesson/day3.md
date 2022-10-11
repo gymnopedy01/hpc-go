@@ -215,5 +215,5 @@ func getOperator(op string) func (int,int) int
 
 -끝-   
 
-[D2 네이버 - goLang 도입기 리뷰 - 1 시간 영상](https://www.youtube.com/watch?v=B7TF6yIRsWs)
+[D2 네이버 - goLang 도입기 리뷰 - 1 시간 영상](https://www.youtube.com/watch?v=B7TF6yIRsWs)  
 [1일1고](https://www.youtube.com/playlist?list=PLm769nmu3JRCgWB5jjykA5kD4AVBeFK-P)
