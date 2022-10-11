@@ -12,3 +12,6 @@
 - c c언어 실습
 - go go언어 실습
 - lesson 강의내용
+ - [첫날](./lesson/day1.md)
+ - [둘째날](./lesson/day2.md)
+ - [셋째날](./lesson/day3.md)
