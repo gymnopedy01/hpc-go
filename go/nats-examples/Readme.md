@@ -26,7 +26,8 @@ Received  [_INBOX.TsyLZt2bEqN3ndksWuXi6i.HHSNMeNg] : '[Gyeonggi-do, KR]: "ncoinh
 
 프로젝트 초기 구성 및 실행
 ```shell
-go mod init main
+go mod init nats-echo
 go mod tidy
-go run main.go
+go build
+./nats-echo
 ```
