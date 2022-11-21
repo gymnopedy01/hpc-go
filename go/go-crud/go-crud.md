@@ -3,44 +3,37 @@ JSON CRUD API 만들기 (Gin/Gorm)
 
 ## 설치
 
-### CompileDaemon
-https://github.com/githubnemo/CompileDaemon
-
+### [CompileDaemon](https://github.com/githubnemo/CompileDaemon)
 ```shell
 go get github.com/githubnemo/CompileDaemon
 ```
 
-### Gin
-https://gin-gonic.com/docs/quickstart/
+### [Gin](https://gin-gonic.com/docs/quickstart/)
 ```shell 
 go get -u github.com/gin-gonic/gin
 ```
 
-### Gorm
-https://gorm.io/docs/
+### [Gorm](https://gorm.io/docs/)
 ```shell
 go get -u gorm.io/gorm
-go get -u gorm.io/driver/sqlite
+go get -u gorm.io/driver/postgres
 ```
 
 ```shell
 CompileDaemon -command="./go-crud -my-options"
 ```
 
-### GoDotEnv
-https://github.com/joho/godotenv
-
-go >= 1.17  
+### [GoDotEnv](https://github.com/joho/godotenv)
+- go >= 1.17  
 ```shell 
 go install github.com/joho/godotenv/cmd/godotenv@latest
 ```
-go < 1.17  
+- go < 1.17  
 ```shell
 go get github.com/joho/godotenv/cmd/godotenv
 ```
-### ElephantSQL
-https://www.elephantsql.com/
-postgres db 생성
+### [ElephantSQL](https://www.elephantsql.com/)
+- postgres db 생성
 https://api.elephantsql.com/console/2f86e3e5-0e70-42af-9a40-a2f28015a31e/details
 
 ## Run Migrate
