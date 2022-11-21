@@ -10,14 +10,14 @@ func PrintHangul() {
 
 	for _, v := range hanguls {
 		time.Sleep(300 * time.Millisecond)
-		fmt.Printf("%c", v)
+		fmt.Printf("%c ", v)
 	}
 }
 
 func PrintNumbers() {
 	for i := 1; i <= 5; i++ {
 		time.Sleep(400 * time.Millisecond)
-		fmt.Printf("%d", i)
+		fmt.Printf("%d ", i)
 	}
 }
 

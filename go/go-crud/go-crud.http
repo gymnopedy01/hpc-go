@@ -1,0 +1,28 @@
+POST localhost:3000/posts
+
+### Create Posts
+POST http://localhost:3000/posts
+content-type: application/json
+
+{
+    "Title": "from req title2",
+    "Body": "from req body2"
+}
+
+### Fetch Posts
+GET http://localhost:3000/posts
+
+### Fetch Post
+GET http://localhost:3000/posts/200
+
+### Update Post
+PUT http://localhost:3000/posts/1
+content-type: application/json
+
+{
+    "Title": "updated title2",
+    "Body": "updated body2"
+}
+
+### Delete Post
+DELETE http://localhost:3000/posts/1
