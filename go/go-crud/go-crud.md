@@ -1,5 +1,5 @@
-# JSON CRUD API 만들기 (Gin/Gorm)
-https://www.youtube.com/watch?v=lf_kiH_NPvM
+# [Creating a JSON CRUD API in Go (Gin/GORM)](https://www.youtube.com/watch?v=lf_kiH_NPvM)
+JSON CRUD API 만들기 (Gin/Gorm)
 
 ## 설치
 
