@@ -1,5 +1,3 @@
-POST localhost:3000/posts
-
 ### Create Posts
 POST http://localhost:3000/posts
 content-type: application/json
@@ -9,10 +7,10 @@ content-type: application/json
     "Body": "from req body2"
 }
 
-### Fetch Posts
+### Fetch All Posts
 GET http://localhost:3000/posts
 
-### Fetch Post
+### Fetch One Post 
 GET http://localhost:3000/posts/200
 
 ### Update Post
