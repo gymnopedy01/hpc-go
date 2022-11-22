@@ -37,17 +37,13 @@ go install github.com/joho/godotenv/cmd/godotenv@latest
 go get github.com/joho/godotenv/cmd/godotenv
 ```
 
-## 서버 구동
-
-```shell
-go build
-CompileDaemon -command="./go-crud "
-```
-
 ### [ElephantSQL](https://www.elephantsql.com/) - PostgresSQL Saas
 
 - postgres db 생성
-    - https://api.elephantsql.com/console/2f86e3e5-0e70-42af-9a40-a2f28015a31e/details
+  - https://api.elephantsql.com/console/2f86e3e5-0e70-42af-9a40-a2f28015a31e/details
+
+## 서버 구동
+
 
 ### Run Migrate
 
@@ -57,8 +53,15 @@ CompileDaemon -command="./go-crud "
 go run migrate/migrate.go
 ```
 
-## 개발
+### Run Server
+CompileDaemon 사용한 웹서버 구동 
+```shell
+go build
+CompileDaemon -command="./go-crud "
+```
 
+
+## 개발
 [main](main.go)  
 [poostController](controllers/postController.go)  
 [model](models/postModel.go)  
