@@ -1,0 +1,28 @@
+###
+POST http://localhost:9000/users
+content-type: application/json
+
+{
+  "firstname": "th",
+  "lastname": "oh",
+  "email": "fuga@ncsoft.com"
+}
+
+### all user
+GET http://localhost:9000/users
+
+### get user
+GET http://localhost:9000/users/5
+
+### update user
+PUT http://localhost:9000/users/5
+content-type: application/json
+
+{
+  "firstname": "th-change",
+  "lastname": "oh-change",
+  "email": "fuga@ncsoft.com"
+}
+
+### delete user
+DELETE http://localhost:9000/users/7
